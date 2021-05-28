@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "eaae4da8-0821-4077-a16d-f2036f1f4907",
+		"name": "Laravel Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"super@admin.com\",\r\n    \"password\" : \"secret123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"admin@gmail.com\",\r\n    \"password\" : \"password\",\r\n    \"name\" : \"Admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Role",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2ExMTYzMDMzYTllMjBmMDdlYTAxOWY4YWM2NDAwZTk1NzJiZDc0Yjk4ZTgxZjdiZTU4MDllYTQwZmM5NjIwYzk4ZDNkZTRjZjkxN2Q1Y2QiLCJpYXQiOjE2MjIxMzc1ODEsIm5iZiI6MTYyMjEzNzU4MSwiZXhwIjoxNjUzNjczNTgxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.GLEnmaMbmqqI69srN8G4kDDjmmzyBJeZxsts_s8oPqH6vvArN865Kqjc3t54e_Ka_k5jKL3JSmAjlylDKZQ0BWg33GLCz4q5ycI9PEmn5VV0v1eQfwmvc4fKQMZcqXa2w-iiQszEFpyyWIRqzN72O55Yrsmp6RAZKtKnsz2NSg74iRhx1bQoeFMUBj9eeC_Fv_qQMPtyDkd-kmqmaOvGvM3d8lV1s5HivEwh6mwnlnjlRK8qKXfibeynpVxmhfaHAG7Zu7J8uenOCyfQ2Z5e51LaqteHHCJvE8gZh75nhHN3VLcluT9ZV9y7a60s24kpIOpTq8ijJUPU1g4fxnhADGG5epA6k7HoiI701MZ2_yWAr1dcC8AwABGqSyrqr0Z1V_XqE-I-Wcu_TSB1MpKAH791w0LjSh1mJWKsNNht95eHRaPVlVGY2mp2XtNr4Iww5XvKjD_rz-xTV3G2oS9WKXvfkv1g-OJQ2hLuiPbRt8Jgk5TEUrmldVHJ9iDtnFhQeU055576hQucnv00zm9411Eot-MEkZw7xCDITPByTFdRA7upaZAAQRoiQNQFJZn-06iPUCxr-dEzzNQ2FbjjVp0M7kd2BGFGCjynaYMAR4HFvT06G99ZFenbf8uPB9Y8zANeV9DXCnGi2ar8o025c4qd6rVSNFS4gNVKK9XoOjc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"xyz\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/role",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGEzMTBlYWVmMTQ0OWRhMmQ5MTAwOTgwODRjN2ZiMGQ1ZmQ2MGRjZDY0MDc3MzZjYTdjOGY4ODRjMGJiOGYzYmFjZmU0YmVhZTQ3NDk0Y2IiLCJpYXQiOjE2MjIxMTg0MjUsIm5iZiI6MTYyMjExODQyNSwiZXhwIjoxNjUzNjU0NDI1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cCgFyoW9FJjgqWgFDQh6_oFJfEn3DckKTR9ejTvf0vZ-3xXa3X-Y3pABOsVAMNnrgmvlZTZXMnWcEm8eBPW7oYeyOmdxgAXM5asB6hAW9lmjCWgFz0K3J8FuSzSUECrt4n4_Y9_ch6ol2ZUnUU0lX528C7g3Q6A4Gc_xbtbei7m1XVwhnwWEBlHU6YdmrnDr5bpfImsNqjjZYbLb3eQRbQZzx-5uKEb0yCKVDwy7djnVmGm5aOuPlCGOKBZ-Z-Qxsb3_4padpGnGah6ooEZNG8bUuo4AnIFxB2oz8pjdW3CZOUolElunBtNTBQ4ffVwMUy-0wEs251URq9noNllHpQD4ouwj15VT__JCTfzETwOW_DelMsqamuCraQPCFQ6hE-vQrIIUHvb1ETtR_XCaKUru11SYEzBYF9bSlxn45NlLs32QdAlCYuZCzD33HHbV9b2e3xUAWz6TBsiRAJRDI2aFAl9SqRUKcmBAYmGi7SFtrNR1PIIB7E3CLoD1Vl_iMI_3T4XtQq7G8CxZSq5s3koYangTYP5Ml9oC1ptYDaLnjBLJ5JkULLbYQYd9EX2Q0ftayLsiO335KXTSuhJDVDYvT-OOu0Vp3yF8NVieU9OJWf8wIn-5WuJlFlCafmdK3rO66dQCMLakhJD2kmnKWi2YnplN70lmw1kOI8i8Gqs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "admin_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "role_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/v1/assign",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGEzMTBlYWVmMTQ0OWRhMmQ5MTAwOTgwODRjN2ZiMGQ1ZmQ2MGRjZDY0MDc3MzZjYTdjOGY4ODRjMGJiOGYzYmFjZmU0YmVhZTQ3NDk0Y2IiLCJpYXQiOjE2MjIxMTg0MjUsIm5iZiI6MTYyMjExODQyNSwiZXhwIjoxNjUzNjU0NDI1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cCgFyoW9FJjgqWgFDQh6_oFJfEn3DckKTR9ejTvf0vZ-3xXa3X-Y3pABOsVAMNnrgmvlZTZXMnWcEm8eBPW7oYeyOmdxgAXM5asB6hAW9lmjCWgFz0K3J8FuSzSUECrt4n4_Y9_ch6ol2ZUnUU0lX528C7g3Q6A4Gc_xbtbei7m1XVwhnwWEBlHU6YdmrnDr5bpfImsNqjjZYbLb3eQRbQZzx-5uKEb0yCKVDwy7djnVmGm5aOuPlCGOKBZ-Z-Qxsb3_4padpGnGah6ooEZNG8bUuo4AnIFxB2oz8pjdW3CZOUolElunBtNTBQ4ffVwMUy-0wEs251URq9noNllHpQD4ouwj15VT__JCTfzETwOW_DelMsqamuCraQPCFQ6hE-vQrIIUHvb1ETtR_XCaKUru11SYEzBYF9bSlxn45NlLs32QdAlCYuZCzD33HHbV9b2e3xUAWz6TBsiRAJRDI2aFAl9SqRUKcmBAYmGi7SFtrNR1PIIB7E3CLoD1Vl_iMI_3T4XtQq7G8CxZSq5s3koYangTYP5Ml9oC1ptYDaLnjBLJ5JkULLbYQYd9EX2Q0ftayLsiO335KXTSuhJDVDYvT-OOu0Vp3yF8NVieU9OJWf8wIn-5WuJlFlCafmdK3rO66dQCMLakhJD2kmnKWi2YnplN70lmw1kOI8i8Gqs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "admin_id",
+							"value": "9",
+							"type": "text"
+						},
+						{
+							"key": "role_id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/v1/removeRole",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"removeRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v1/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Role Lists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User With Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2ExMTYzMDMzYTllMjBmMDdlYTAxOWY4YWM2NDAwZTk1NzJiZDc0Yjk4ZTgxZjdiZTU4MDllYTQwZmM5NjIwYzk4ZDNkZTRjZjkxN2Q1Y2QiLCJpYXQiOjE2MjIxMzc1ODEsIm5iZiI6MTYyMjEzNzU4MSwiZXhwIjoxNjUzNjczNTgxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.GLEnmaMbmqqI69srN8G4kDDjmmzyBJeZxsts_s8oPqH6vvArN865Kqjc3t54e_Ka_k5jKL3JSmAjlylDKZQ0BWg33GLCz4q5ycI9PEmn5VV0v1eQfwmvc4fKQMZcqXa2w-iiQszEFpyyWIRqzN72O55Yrsmp6RAZKtKnsz2NSg74iRhx1bQoeFMUBj9eeC_Fv_qQMPtyDkd-kmqmaOvGvM3d8lV1s5HivEwh6mwnlnjlRK8qKXfibeynpVxmhfaHAG7Zu7J8uenOCyfQ2Z5e51LaqteHHCJvE8gZh75nhHN3VLcluT9ZV9y7a60s24kpIOpTq8ijJUPU1g4fxnhADGG5epA6k7HoiI701MZ2_yWAr1dcC8AwABGqSyrqr0Z1V_XqE-I-Wcu_TSB1MpKAH791w0LjSh1mJWKsNNht95eHRaPVlVGY2mp2XtNr4Iww5XvKjD_rz-xTV3G2oS9WKXvfkv1g-OJQ2hLuiPbRt8Jgk5TEUrmldVHJ9iDtnFhQeU055576hQucnv00zm9411Eot-MEkZw7xCDITPByTFdRA7upaZAAQRoiQNQFJZn-06iPUCxr-dEzzNQ2FbjjVp0M7kd2BGFGCjynaYMAR4HFvT06G99ZFenbf8uPB9Y8zANeV9DXCnGi2ar8o025c4qd6rVSNFS4gNVKK9XoOjc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/v1/userWithRole",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"userWithRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
