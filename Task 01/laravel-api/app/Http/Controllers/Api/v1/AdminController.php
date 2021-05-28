@@ -86,15 +86,6 @@ class AdminController extends Controller
 
         // All Admin Roles
         $user_roles = $admin->roles()->pluck('name')->toArray();
-        // If The Admin Is A Doctor
-//        if (in_array('doctor', $user_roles)) {
-//            $admin = $admin->load('doctor');
-//        } elseif (in_array('assistant', $user_roles)) {
-//            $admin = $admin->load('assistant');
-//        } elseif (in_array('patient', $user_roles)) {
-//            $admin = $admin->load('patient');
-//        } else {
-//        }
 
         $response = [
             'error' => false,
